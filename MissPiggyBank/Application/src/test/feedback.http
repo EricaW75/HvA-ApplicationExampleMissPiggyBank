@@ -1,0 +1,11 @@
+POST http://localhost:8080/AutorizeUser
+Content-Type: application/json
+
+{
+  "name": "Kermit Frog",
+  "recipient": "koopmantim@gmail.com",
+  "personalMessage": "Hi Miss Piggy, Please Autorize yourself to use my bank account\n dont forget its still my money Bitch!",
+  "autorisationCode": "23455"
+}
+
+###

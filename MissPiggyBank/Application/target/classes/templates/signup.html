@@ -1,0 +1,56 @@
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>Welkom nieuwe klant!</title>
+</head>
+
+
+<body>
+<!-- Page Header and nav start-->
+<div class="grid">
+    <header class="grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">MISS PIGGY BANK</div>
+    </header>
+    <nav class="grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="index">Home</a></li>
+            <li class="nav-item current"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header and nav end-->
+    <div class="signupgridtop">
+        <h1 class="signupheadtop"> Oké, zullen we<br>onze relatie officieel maken? </h1>
+
+    </div>
+
+
+    <div class="signupgridleft">
+        <p class="signupparleft">Klik hier om een <strong>privérekening</strong> te openen</p>
+        <form method="get" action="private/signup">
+            <button type="submit" class="button button-back">Sign up</button>
+        </form>
+    </div>
+
+    <div class="signupgridright">
+        <p class ="signupparright">Klik hier om een <strong>zakelijke rekening</strong>  te openen</p>
+        <form method="get" action="business/signup">
+            <button type="submit" class="button button-cta">Sign up</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

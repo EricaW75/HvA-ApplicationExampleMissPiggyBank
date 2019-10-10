@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorisation result</title>
+</head>
+<body>
+<h1>Tekst die succes of failure aangeeft (hier onder).</h1>
+
+<span th:text="${result}"> </span>
+<form method="get" th:action="@{logOut}">
+    <button type="submit" class="button button-back">Log uit</button>
+</form>
+</body>
+</html>

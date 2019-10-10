@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Voer de authorisatiecode in</title>
+</head>
+<body>
+
+<form th:object="${authorisationdata}" th:action="@{authorisation_result}" method="POST">
+    <p>Koppeling met gebruiker: <span th:text="${accountOwner}"></span></p>
+    <p>Betreft IBAN: <span th:text="${authorisationdata.iban}"></span></p>
+
+
+    <label>Voer de authorisatie code hier in om op deze rekening geauthoriseerd te worden.</label>
+    <input type="text" th:field="*{verificationCode}">
+
+    <input hidden type="text" th:value="*{id}" th:field="*{id}">
+    <input hidden type="text" th:value="*{iban}" th:field="*{iban}">
+    <input type="submit" class="button-bottom button-cta" value="Koppel rekening">
+
+
+</form>
+
+</body>
+</html>

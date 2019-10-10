@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c0850a2-c41b-4aa8-ba6b-c06219bbfc4a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1REFajBQd8Fk6NET8XcjPHUhxY6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Advanced Programming/ADS-Erica Simpson Eindopdracht" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\simps\Documents\HvA\MissPiggyBank\team-5\Application\src\main\resources\static\img" />
+      <recent name="C:\Users\simps\Documents\HvA\MissPiggyBank\team-5\Application\data" />
+      <recent name="C:\Users\simps\Documents\HvA\MissPiggyBank\team-5\Application" />
+      <recent name="C:\Users\simps\Documents\HvA\MissPiggyBank\team-5\Application\src\main\resources\static\css" />
+      <recent name="C:\Users\simps\Documents\HvA\MissPiggyBank\team-5\Application\src\main\resources\templates\business" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="BankingappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="bankingapp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="c16.mpb.bankingapp.BankingappApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c0850a2-c41b-4aa8-ba6b-c06219bbfc4a" name="Default Changelist" comment="" />
+      <created>1569224414026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569224414026</updated>
+      <workItem from="1569224415389" duration="57441000" />
+      <workItem from="1569416035557" duration="47084000" />
+      <workItem from="1569917031952" duration="56043000" />
+      <workItem from="1570111575174" duration="56012000" />
+    </task>
+    <task id="LOCAL-00001" summary="CSS &amp; HTML signupform">
+      <created>1569225274601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569225274601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CSS &amp; HTML private &amp; business signup, overview_private">
+      <created>1569249297658</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569249297658</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Database imports: Account managers, Department Heads, 3000 Clients and 1000 business clients.">
+      <created>1569416512609</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569416512609</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Radio buttons in sign-up">
+      <created>1569485732577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569485732577</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Database: including 1000 transactions">
+      <created>1569503949247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569503949247</updated>
+    </task>
+    <task id="LOCAL-00006" summary="&quot;Herhaal wachtwoord&quot; uit database">
+      <created>1569504329949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569504329949</updated>
+    </task>
+    <task id="LOCAL-00007" summary="JavaScript PasswordValidator">
+      <created>1569510465553</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569510465553</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Style selection box for Sector (business client signup)">
+      <created>1569529263967</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569529263967</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Style selection box for MyPiggyBank Account select">
+      <created>1569568351759</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569568351759</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added customer/ bank account relationship to 3000+ database">
+      <created>1569933490710</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569933490710</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix grammer - password validator - HET wachtwoord">
+      <created>1570097421215</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1570097421215</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Change account manager to Enum &amp; write selection to database.&#10;Database changes, businessCustomer constructor  &amp; signup html to changed.">
+      <created>1570097527367</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1570097527367</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add persoonlijke gegevens to My piggy bank page">
+      <created>1570185164337</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570185164337</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix spelling">
+      <created>1570185333798</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1570185333798</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Bug fixes: Added space for phone number on signup, remove buttons to department head pages.">
+      <created>1570434040367</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1570434040367</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Bug fixes: Remove extra &lt;/div&gt; on miss piggy bank page">
+      <created>1570438456914</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1570438456914</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add Business Customer detail to MyPiggyBank page">
+      <created>1570537527970</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570537527970</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add Business Acc details to MyPiggy Bank - 2">
+      <created>1570538708433</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1570538708433</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Bug Fix - return to mypiggy bank now also shows business customer details">
+      <created>1570621489159</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1570621489159</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="CSS &amp; HTML signupform" />
+    <MESSAGE value="CSS &amp; HTML private &amp; business signup, overview_private" />
+    <MESSAGE value="Database imports: Account managers, Department Heads, 3000 Clients and 1000 business clients." />
+    <MESSAGE value="Radio buttons in sign-up" />
+    <MESSAGE value="Database: including 1000 transactions" />
+    <MESSAGE value="&quot;Herhaal wachtwoord&quot; uit database" />
+    <MESSAGE value="JavaScript PasswordValidator" />
+    <MESSAGE value="Style selection box for Sector (business client signup)" />
+    <MESSAGE value="Style selection box for MyPiggyBank Account select" />
+    <MESSAGE value="Added customer/ bank account relationship to 3000+ database" />
+    <MESSAGE value="Fix grammer - password validator - HET wachtwoord" />
+    <MESSAGE value="Change account manager to Enum &amp; write selection to database.&#10;Database changes, businessCustomer constructor  &amp; signup html to changed." />
+    <MESSAGE value="Add persoonlijke gegevens to My piggy bank page" />
+    <MESSAGE value="Fix spelling" />
+    <MESSAGE value="Bug fixes: Added space for phone number on signup, added buttons to department head pages." />
+    <MESSAGE value="Bug fixes: Added space for phone number on signup, remove buttons to department head pages." />
+    <MESSAGE value="Bug fixes: Remove extra &lt;/div&gt; on miss piggy bank page" />
+    <MESSAGE value="Add Business Customer detail to MyPiggyBank page" />
+    <MESSAGE value="Add Business Acc details to MyPiggy Bank - 2" />
+    <MESSAGE value="Bug Fix - return to mypiggy bank now also shows business customer details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fix - return to mypiggy bank now also shows business customer details" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/c16/mpb/bankingapp/controller/LoginController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

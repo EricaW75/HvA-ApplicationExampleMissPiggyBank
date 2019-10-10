@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="grid">
+        <header class="grid-item grid-header">
+            <div class="headerlogo"></div>
+            <div class="headertext">MISS PIGGY BANK</div>
+        </header>
+        <nav class="grid-item grid-navigation menu">
+            <ul class="menu-nav">
+                <li class="nav-item"><a href="index">Home</a></li>
+                <li class="nav-item"><a href="signup">Inschrijven</a></li>
+                <li class="nav-item current"><a href="login">Inloggen</a></li>
+                <li class="nav-item"><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="grid-item grid-aside1"></div>
+        <main class="grid-item grid-main">
+            <h1 class="loginheader">Je bergen goud bekijken?</h1>
+            <form action="#" th:action="@{mypiggybank}" th:object="${user}" method="post"> <!-- Nathan - Fix voor postrequest -->
+                <div class="container_white signupform">
+                    <table>
+                        <h2 class="formhead2">Log dan snel in!</h2>
+                        <div th:if="${loginError != null}"> Het inloggen is niet gelukt. Controleer uw gebruikersnaam en wachtwoord en probeer het opnieuw.</div>
+                        <label>Username:</label>
+                        <input type="text" th:field="*{username}">
+                        <label>Password:</label>
+                        <input type="password" th:field="*{password}">
+                    </table>
+                </div>
+                <div>
+                    <input type="submit" class="button-bottom button-cta" value="Login">
+                </div>
+            </form>
+            <img class="statler_waldorf" th:src="@{/img/statler_waldorf.gif}"/>
+        </main>
+        <div class="grid-item grid-aside2"></div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

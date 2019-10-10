@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Toevoegen extra rekeninghouder</title>
+
+</head>
+<body>
+
+<h1 class="formhead1">Toevoegen extra rekeninghouder</h1>
+
+
+<form action="#" th:action="@{verificationcode_saved}" th:object="${addAccountHolderAuthorisationData}"  method="post">
+    <div>
+    <p class="top-info-sub1">Toevoegen voor IBAN: <span th:text="${addAccountHolderAuthorisationData.iban}"/></p>
+    </div>
+
+    <div class="container_white signupform">
+        <table>
+            <label>Gebruikersnaam van extra rekeninghouder</label>
+            <input type="text" th:field="*{userName}">
+            <p>&nbsp</p>
+            <label>Beveiligingscode (getal van 5 cijfers)</label>
+            <input type="text" th:field="*{verificationCode}">
+            <input hidden type="text" th:value="*{iban}" th:field="*{iban}">
+        </table>
+    </div>
+    <div>
+        <input type="submit" class="button-bottom button-cta" value="Oink">
+    </div>
+
+</body>
+</html>

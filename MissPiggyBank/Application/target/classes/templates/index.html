@@ -1,0 +1,57 @@
+<!-- Nathan -->
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>MissPiggyBank | Saving your bacon...</title>
+</head>
+<body>
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">Miss Piggy Bank</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item current"><a href="index">Home</a></li>
+            <li class="nav-item"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="grid-item grid-hero">
+        <h1 class="hero-slogan">Saving your bacon...</h1>
+        <img class="piggy" th:src="@{/img/karate-piggy-hero.png}"/>
+    </div>
+    <div class="grid-item grid-bottom grid-login">
+        <p>Welkom terug piggy.</p>
+        <form method="get" action="login">
+            <button type="submit" class="button button-back">Log in</button>
+        </form>
+    </div>
+    <div class="grid-item grid-bottom grid-join">
+        <p>H&eacute; hallo vreemdeling!</p>
+
+        <form method="get" action="signup">
+            <button type="submit" class="button button-cta">Word klant</button>
+        </form>
+    </div>
+</div> <!-- GRID -->
+
+<!--    <h1>Welkom op de website van de MissPiggyBank</h1>
+    <p>Klik <a href="login">hier</a> om in te loggen.</p>
+    <p>Klik <a href="signup">hier</a> om klant te worden.</p>
+    <h2>Debug-dingen voor MissPiggyBank</h2>-->
+<p>Klik <a href="initdb2">hier</a> om de grote database te vullen.</p>
+
+<p>Klik <a href="initdb">hier</a> om de kleine database te vullen.</p>
+
+
+</body>
+</html>

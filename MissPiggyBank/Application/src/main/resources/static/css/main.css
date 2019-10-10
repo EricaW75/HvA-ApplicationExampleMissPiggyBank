@@ -1,0 +1,1093 @@
+/* Nathan - CSS Miss Piggy Bank - Version 0.1 */
+
+/* -------------------------------------------------- */
+
+/* GENERAL STYLES FONT / COLOUR BEGIN */
+
+body {
+    background: url('../img/texture_white.png');
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #964523;
+    text-align: center;
+}
+
+p {
+    color: #5d76b8;
+    padding: 0 1em;
+    text-align: left;
+}
+
+h1, h2 {
+    color: #382f72;
+    user-select: none;
+}
+
+i {
+    width: 25px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+/* GENERAL STYLES FONT / COLOUR END */
+
+/* -------------------------------------------------- */
+
+/* GENERAL STYLES CSS GRID START */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-template-rows: 1fr auto;
+}
+
+.grid-item {
+    /*background: #e8e8e8;*/
+}
+
+/* GENERAL STYLES CSS GRID END */
+
+/* -------------------------------------------------- */
+
+/* HEADER STYLES START */
+
+.grid-header {
+    /*background: #fff;*/
+    grid-column: col / span 12;
+    margin: 20px 0;
+}
+
+.headerlogo {
+    background: url('../img/headerlogo.svg');
+    background-size: 102px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    width: auto;
+}
+
+.headertext {
+    color: #646464;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* HEADER STYLES END */
+
+/* -------------------------------------------------- */
+
+/* NAVIGATION STYLES START */
+
+.grid-navigation {
+    grid-column: col / span 12;
+}
+
+.menu {
+    background: #382f72;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.menu-nav {
+    list-style: none;
+    margin: 6px 6px 0 4px;
+}
+
+.nav-item {
+    border-bottom: 4px solid #382f72;
+    display: inline-block;
+    transition-duration: 0.2s;
+    width: 14%;
+    padding: 0 0 2px 0;
+}
+
+.nav-item a {
+    color: #fff;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.current {
+    border-bottom: 4px solid #ff9283;
+}
+
+.nav-item:hover {
+    border-bottom: 4px solid #ff9283;
+}
+
+/* NAVIGATION STYLES END */
+
+/* -------------------------------------------------- */
+
+/* MAIN GRID LAYOUT STYLES BEGIN */
+
+.grid-main {
+    background: url('../img/texture-grey.png');
+    grid-column: col 4 / span 6;
+    z-index: 200;
+}
+
+.grid-aside1 {
+    background: url('../img/texture-grey.png');
+    grid-column: col / span 3;
+}
+
+.grid-aside2 {
+    background: url('../img/texture-grey.png');
+    grid-column: col 10 / span 3;
+}
+
+.grid-pusher {
+    background: url('../img/texture-grey.png');
+    grid-column: col / span 12;
+    height: 112px;
+}
+
+.bottom-space {
+    height: 220px;
+}
+
+.main-top {
+    /*background: #e8e8e8;*/
+    color: #382f72;
+    padding: 60px 5px 40px 5px;
+}
+
+.main-prime {
+    background: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 20px;
+}
+
+.mypiggybank-prime {
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+
+/* Adder by Erica START*/
+.form-control {
+    font-family: Poppins;
+    font-size: 16px;
+    border: 1px solid #FF9283;
+    border-radius: 20px;
+    margin-top: 14px;
+    float: left;
+    height: 24px;
+    width: 50%;
+    margin-right: 5%;
+    /*text-align: justify-all;*/
+
+}
+
+
+
+/* Adder by Erica END*/
+
+.bottom-rounded {
+    border-radius: 20px 20px 20px 20px;
+    padding-bottom: 50px;
+}
+
+.main-contact {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.main-contact, .main-contact p {
+    text-align: center;
+}
+
+.main-contact h2 {
+    color: #ff9283;
+}
+
+.main-contact:hover {
+    box-shadow: 0 3px 5px 2px rgba(56, 47, 114, 0.5);
+    transform: translateY(-2px);
+}
+
+/* MAIN GRID LAYOUT STYLES END */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR ALL TABLE ELEMENTS BEGIN */
+
+table {
+    border-collapse: collapse;
+    color: #382f72;
+    text-align: left;
+    width: 100%;
+}
+
+/* gemaakt voor proberen 2 tabellen naast elkaar te krijgen op business_overview  */
+
+.klanttabellinks, .klanttabelrechts {
+    display: inline-block;
+    width: 40%;
+}
+
+.klanttabellinks .prime-table tr:hover, .klanttabelrechts .prime-table tr:hover {
+    background: #fff;
+    cursor: default;
+}
+
+.klanttabelrechts td {
+    text-align: right;
+}
+
+/*.doubletableL {*/
+/*    border-collapse: collapse;*/
+/*    color: #382f72;*/
+/*    text-align: left;*/
+/*    float: left;*/
+/*    width: 50%;*/
+/*    grid-column: 4/7;*/
+/*}*/
+
+/*!*  *!*/
+/*.doubletableR {*/
+/*    border-collapse: collapse;*/
+/*    color: #382f72;*/
+/*    text-align: right;*/
+/*    float: right;*/
+/*    width: 50%;*/
+/*    grid-column: 7/10;*/
+/*}*/
+
+/* STYLING FOR ALL TABLE ELEMENTS END */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR TOP TABLE DATA BEGIN */
+
+.dateline td {
+    font-size: 18px;
+    font-style: italic;
+    padding: 0 0 20px 0;
+}
+
+.top-table {
+    font-size: 29.0725px;
+    font-weight: normal;
+    line-height: 39px;
+}
+
+.top-account {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.balance {
+    padding: 0 8px 0 0;
+    text-align: right;
+}
+
+.balance-decimal {
+    font-size: 19.3816px;
+    vertical-align: top;
+}
+
+#original {
+    display: none;
+}
+
+.transaction-div {
+    border-bottom: 1px solid rgba(255, 146, 131, 0.5);
+    z-index: 99;
+}
+
+.transaction-div:hover {
+    background: rgba(255, 146, 131, 0.09);
+    cursor: pointer;
+}
+
+.transactiondate, .transactiondescription, .transactionamount {
+    color: #382f72;
+    display: inline-block;
+    line-height: 10px;
+    z-index: 10;
+}
+
+.transactiondate, .transactiondescription {
+    text-align: left;
+}
+
+.transactiondate {
+    width: 20%;
+}
+
+.transactiondescription {
+    width: 50%;
+}
+
+.transactionamount {
+    text-align: right;
+    width: 20%;
+}
+
+.transactionextra {
+    color: #777d91;
+    display: inline-block;
+    line-height: 20px;
+    text-align: left;
+    padding: 0 0 10px 0;
+    width: 90%;
+}
+
+.transactionextrahidden {
+    display: none;
+}
+
+.transaction-div {
+    border-bottom: 1px solid rgba(255, 146, 131, 0.5);
+    z-index: 99;
+}
+
+.transaction-div:hover {
+    background: rgba(255, 146, 131, 0.09);
+    cursor: pointer;
+}
+
+.transactiondate, .transactiondescription, .transactionamount {
+    color: #382f72;
+    display: inline-block;
+    line-height: 10px;
+    z-index: 10;
+}
+
+.transactiondate, .transactiondescription {
+    text-align: left;
+}
+
+.transactiondate {
+    width: 20%;
+}
+
+.transactiondescription {
+    width: 50%;
+}
+
+.transactionamount {
+    text-align: right;
+    width: 20%;
+}
+
+.transactionextra {
+    color: #777d91;
+    display: inline-block;
+    line-height: 20px;
+    text-align: left;
+    padding: 0 0 10px 0;
+    width: 90%;
+}
+
+.transactionextrahidden {
+    display: none;
+}
+
+.transaction-error {
+    font-size: 20px;
+}
+
+/* STYLING FOR TOP TABLE DATA END */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR PRIME TABLE DATA BEGIN */
+
+
+/* GR */
+.top-info {
+    color: #382f72;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+/* GR */
+.top-info-sub1 {
+    color: #382f72;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* GR */
+.top-info-sub2 {
+    color: #382f72;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* GR */
+.whitespace {
+    margin-top: 20px;
+    margin-right: 20%;
+}
+
+.table-description {
+    color: #8A8A8A;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+
+.prime-table tr:hover {
+    background: rgba(255, 146, 131, 0.09);
+    cursor: pointer;
+}
+
+.prime-table tr td {
+    border-bottom: 1px solid rgba(255, 146, 131, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    padding: 8px;
+    vertical-align: top;
+}
+
+.customeroverview tr:hover {
+    background: #fff;
+    cursor: default;
+}
+
+.description {
+    width: 60%;
+}
+
+.amount {
+    text-align: right;
+}
+
+/* STYLING FOR PRIME TABLE DATA END */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR FOOTER BEGIN */
+
+.grid-footer {
+    background: #fff;
+    bottom: 0px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    height: 80px;
+    padding: 20px 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 300;
+}
+
+.grid-footer form {
+    display: inline;
+    vertical-align: middle;
+}
+
+.button {
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: 68px;
+    letter-spacing: 2px;
+    line-height: 29px;
+    margin: 0 60px;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    width: 192px;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button-back {
+    background: #ff9283;
+    border: 4px solid #ff9283;
+}
+
+.button-back:hover {
+    background: #fff;
+    color: #ff9283;
+    border: 4px solid #ff9283;
+}
+
+.button-cta {
+    background: #382f72;
+    border: 4px solid #382f72;
+}
+
+.button-cta:hover {
+    background: #fff;
+    color: #382f72;
+    border: 4px solid #382f72;
+}
+
+.button-position {
+    margin-top: 50px;
+}
+
+.button-ok {
+    background: #382f72;
+    border: 4px solid #382f72;
+    border-radius: 15px;
+    display: table-cell;
+    font-size: 12px;
+    height: 34px;
+    line-height: 12px;
+    vertical-align: middle;
+    width: 91px;
+}
+
+.button-ok:hover {
+    background: #fff;
+    color: #382f72;
+    border: 4px solid #382f72;
+}
+
+/* STYLING FOR FOOTER END */
+
+/* STYLING FOR CONTACTPAGE & LOGIN BEGIN*/
+
+.loginheader {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 125%;
+    text-align: center;
+    color: #382F72;
+}
+
+.contactheader {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 125%;
+    text-align: center;
+    color: #382F72;
+}
+
+.main-top h2 {
+    font-size: 28px;
+}
+
+.kermit {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+}
+
+.statler_waldorf {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* STYLING FOR CONTACTPAGE & LOGIN END */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR CLICKABLES ON ACCOUNTPAGE & ACCOUNTMANAGER PAGE START */
+
+.clickable {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible-block {
+    display: inline-block;
+}
+
+/* STYLING FOR CLICKABLES ON ACCOUNTPAGE & ACCOUNTMANAGER PAGE END */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR FORMS (ERICA) STARTS */
+
+.formhead1 {
+    text-align:left;
+    font-size: 29px;
+    line-height: 133%;
+    /* or 18px or 133% */
+    color: #382F72;
+}
+.formhead2 {
+    text-align:left;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    color: #FF9283;
+    margin: 0;
+}
+.container_white {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+.zakelijk {
+    margin: 20px;
+}
+
+.signupform label  {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #8A8A8A;
+    margin-top: 14px;
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-left:0%;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #382F72;
+    background: #FFFFFF;
+    border: 1px solid #FF9283;
+}
+
+.signupform input {
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 14px;
+    float: right;
+    height: 24px;
+    width: 40%;
+    margin-right: 5%;
+    padding: 12px 14px;
+}
+
+.makepay input {
+    width: 50%;
+}
+
+.signupform select {
+    transform: translateX(-65px);
+}
+
+.button-bottom {
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: 68px;
+    letter-spacing: 2px;
+    line-height: 29px;
+    /*margin: 0 60px;*/
+    margin: 0 auto;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    width: 180.25px;
+}
+
+/* GR */
+.multiplelines {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #382F72;
+    background: #FFFFFF;
+    border: 1px solid #FF9283;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 14px;
+    margin-bottom: 42px;
+    float: right;
+    height: 120px;
+    width: 50%;
+    margin-right: 5%;
+    padding: 12px 14px;
+    resize: none;
+}
+
+.signupform input, .signupform textarea {
+    transform: translateX(-65px);
+}
+
+/* STYLING FOR FORMS (ERICA) ENDS */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR SIGNUP STARTS */
+.signupheader {
+
+    width: 404px;
+    height: 180px;
+    left: 511px;
+    top: 231px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #382F72;
+}
+
+.signupgridtop {
+    background: url('../img/texture_white.png');
+    height: 52vh;
+    grid-column: col / span 12;
+}
+
+.signupheadtop {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 125%;
+    text-align: center;
+    color: #382F72;
+}
+
+.signupparleft{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.signupparright{
+    text-align: center;
+    color: #555555;
+}
+
+.signupgridleft{
+    grid-column: col / span 6;
+    /*width: 729px;*/
+    height: 180px;
+    /*left: -1px;*/
+    /*top: 481px;*/
+    background: #382F72;
+}
+
+.signupgridright{
+    grid-column: col 7 / span 6;
+    /*width: 728px;*/
+    height: 180px;
+    /*left: 728px;*/
+    /*top: 481px;*/
+    background: #FF9283;
+
+}
+/* STYLING FOR SIGNUP ENDS */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR Account Managers (ERICA) STARTS */
+
+.accountmanager-label {
+    display: inline-block;
+}
+
+.muppets{
+    border-radius: 50%;
+    width: 75px;
+    height: auto;
+    opacity: 0.6;
+}
+
+.radio_item {
+    display: none;
+
+}
+
+.radio_item + img {
+    cursor: pointer;
+    border: 2px solid dimgray ;
+    margin: 0 10px;
+
+}
+
+.radio_item:checked + img {
+    border: 2px solid indianred;
+    width: 80px;
+    opacity: 1;
+    }
+
+.selectbox {
+    font-family: Poppins;
+    font-size: 16px;
+    border: 1px solid #FF9283;
+    border-radius: 20px;
+    margin-top: 14px;
+    float: right;
+    height: 24px;
+    width: 40%;
+    margin-right: 5%;
+
+}
+
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR PERSONAL INFO ICONS STARTS */
+.contactborder {
+    border: 2px solid #8A8A8A;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0;
+}
+
+    .contactbordertop {
+        border-top: 2px solid #8A8A8A;
+    }
+
+
+.contactborder h2 {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 3px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.contactbordertop h2 {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 3px;
+    text-align: left;
+    padding-left: 40px;
+}
+.contactleft {
+    display: inline-block;
+    background-image:url('../img/user-64.png');
+    background-size: 22px;
+    background-repeat:no-repeat;
+    background-position:top left;
+    Margin: 0;
+    Padding-left: 30px;
+    width: 40%;
+    height: 60px;
+}
+
+.contactleft  p {
+
+    margin: 0;
+    font-style: italic;
+    line-height: 15px;
+    text-align: left;
+}
+
+
+
+.contactbusinessleft {
+    transform: translateX(-75px) translateY(-55px);
+    display: inline-block;
+    background-image:url('../img/building-64.png');
+    background-size: 22px;
+    background-repeat:no-repeat;
+    background-position:top left;
+    Margin: 0;
+    Padding-left: 30px;
+    width: 40%;
+    height: 60px;
+    line-height: 15px;
+}
+
+.contactbusinessright {
+    transform: translateX(65px);
+    display: inline-block;
+    text-align: center;
+    margin: 0.5px;
+    font-style: italic;
+    line-height: 15px;
+}
+
+.contactbusinessleft  p {
+    margin: 0;
+    font-style: italic;
+    line-height: 15px;
+    text-align: left;
+}
+
+
+
+.contactright {
+    display: inline-block;
+    background-size: 25px;
+    background-repeat:no-repeat;
+    background-position:top right;
+    Margin: 0.5px;
+    Padding-right: 30px;
+    width: 40%;
+    height: 60px;
+
+}
+
+.contactright  p {
+    margin: 0.5px;
+    font-style: italic;
+    line-height: 15px;
+    text-align: right;
+}
+
+
+
+.selectaccount {
+    transform: translateX(60px);
+}
+
+
+/* STYLING FOR PERSONAL INFO ICONS ENDS */
+
+/*input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #382F72;
+    background: #FFFFFF;
+    border: 1px solid #FF9283;
+}
+
+.signupform input {
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 14px;
+
+    margin-right: 5%;
+    padding: 12px 14px;
+}
+*/
+
+/* STYLING FOR Account Managers (ERICA) ENDS */
+
+/* -------------------------------------------------- */
+
+/* STYLING FOR ERROR MESSAGES (ERICA) STARTS */
+.errorMrg {
+    color: indianred;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 5%;
+}
+/* STYLING FOR ERROR MESSAGES (ERICA) ENDS */
+
+/* -------------------------------------------------- */
+
+/* MEDIA QUERIES FOR DEVICES START */
+
+@media screen and (min-width: 990px) /* DESKTOP */ {
+    body {
+        /*background: #fff;*/
+    }
+}
+
+@media screen and (max-width: 989px) /* TABLET */ {
+    body {
+        background: #fff;
+    }
+
+    .headertext {
+        font-size: 18px;
+    }
+
+    .menu {
+        font-size: 12px;
+    }
+
+    .grid-pusher {
+        height: 72px;
+    }
+
+    .top-table {
+        font-size: 18px;
+    }
+
+    .top-account {
+        font-size: 14px;
+    }
+
+    .balance-decimal {
+        font-size: 12px;
+    }
+
+    .prime-table tr td {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .grid-footer {
+        height: 60px;
+        padding: 10px 0;
+    }
+
+    .button {
+        border-radius: 15px;
+        font-size: 12px;
+        height: 60px;
+        width: 150px;
+    }
+
+
+    .backbutton{
+
+        vertical-align: center;
+    }
+}
+
+@media screen and (max-width: 720px) /* MOBILE */ {
+    body {
+        background: #fff;
+        font-size: 1.3em;
+    }
+
+    .nav-item {
+        width: 24%;
+    }
+
+    .grid-legend {
+        font-size: 0.6em;
+    }
+
+    .grid-main {
+        grid-column: col / span 12;
+    }
+
+    .grid-aside {
+        grid-column: col / span 12;
+    }
+
+    .top-overview td {
+        padding: 0 20px;
+    }
+
+    .top-account td {
+        padding: 0 20px;
+    }
+
+    .button {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 10px;
+        height: 50px;
+        width: 120px;
+    }
+
+}
+
+/* MEDIA QUERIES FOR DEVICES END */
+
+/* NOTE: DON'T PUT STYLES BELOW THE MEDIA QUERIES PLEASE */

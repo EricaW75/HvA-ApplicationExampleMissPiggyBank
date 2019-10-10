@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--  Created by Erica & Gabor-->
+
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+    <title>Overzicht Particulieren</title>
+
+</head>
+<body>
+<!-- Page Header start-->
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">MISS PIGGY BANK</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="index">Home</a></li>
+            <li class="nav-item"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header end-->
+
+    <div class="grid-item grid-aside1"></div>
+
+    <main class="grid-item grid-main">
+
+            <h1 class="formhead1">10 klanten met het hoogste saldo</h1>
+        <div class="container_white">
+
+
+            <table class="prime-table customeroverview">
+                <th>Voornaam</th>
+                <th>Achternaam</th>
+                <th>IBAN</th>
+                <th class="amount">Saldo</th>
+
+                    <tr th:each ="topAccount: ${topAccounts}">
+                        <td> <span th:text="${topAccount.owner.firstName}"></span></td>
+                        <td> <span th:text="${topAccount.owner.lastName}"></span></td>
+                        <td> <span th:text="${topAccount.iban}"></span></td>
+                        <td class="amount"> &euro; <span th:text="${#numbers.formatDecimal(topAccount.balance, 0, 'POINT', 2, 'COMMA')}"></span></td>
+                    </tr>
+
+            </table>
+
+        </div>
+    </main>
+
+    <div class="grid-item grid-aside2"></div>
+    <div class="grid-item grid-pusher"></div>
+
+  <!--  <footer class="grid-item grid-footer">
+
+            <a class="backbutton button button-cta "  href="index">Terug</a>
+
+    </footer>-->
+
+
+</div>
+</body>
+</html>

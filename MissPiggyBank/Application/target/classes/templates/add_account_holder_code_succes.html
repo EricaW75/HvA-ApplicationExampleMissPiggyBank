@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>Account Holder verificatie code</title>
+
+</head>
+<body>
+<h1>Er is een code aangemaakt voor de beoogde mede-accountholder. Laat hem inloggen en die code invoeren.</h1>
+
+<form method="get" th:action="@{logOut}">
+    <button type="submit" class="button button-back">Log uit</button>
+</form>
+
+</body>
+</html>

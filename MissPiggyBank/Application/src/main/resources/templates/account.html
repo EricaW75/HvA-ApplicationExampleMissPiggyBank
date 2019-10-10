@@ -1,0 +1,124 @@
+<!-- Nathan -->
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+    <!-- NS - LAAD SCRIPT VOOR UITVOUWFUNCTIE -->
+    <script defer type="text/javascript" th:src="@{/js/overview_account.js}"></script>
+    <title>MissPiggyBank | Bankrekening</title>
+</head>
+<body th:object="${bankAccount}">
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">Miss Piggy Bank</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="index">Home</a></li>
+            <li class="nav-item"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="grid-item grid-aside1">
+    </div>
+    <main class="grid-item grid-main">
+        <div class="main-top">
+            <table class="top-table">
+                <tr class="dateline">
+                    <td colspan="2" th:text="${#calendars.format(#calendars.createNow(), 'dd MMM yyyy HH:mm')}">Huidige
+                        datum/tijd worden hier getoond.
+                    </td>
+                </tr>
+                <tr class="top-overview">
+                    <td>Rekeningoverzicht</td>
+                    <td class="balance">
+                        <span id="original"
+                              th:text="${#numbers.formatDecimal(bankAccount.balance, 1, 'POINT', 2, 'COMMA')}"/>
+                        &euro;&nbsp;<span id="amt" class="balance-whole">0</span>
+                        <span id="dcm" class="balance-decimal">0</span>
+                    </td>
+                </tr>
+                <tr class="top-account">
+                    <td colspan="2"><span th:text="${session.fullname}"/>&nbsp;- <span th:text="*{iban}"/></td>
+                </tr>
+                <tr class="dateline">
+                    <td colspan="2">
+                        <span th:text="${accounttype}"/>
+                    </td>
+                </tr>
+            </table>
+        </div> <!-- main top einde -->
+        <div id="trlist" class="main-prime" th:unless="${#lists.isEmpty(transactions)}">
+            <div th:id="'transactionline' + ${transaction.id}" class="transaction-div" th:each="transaction : ${transactions}">
+                <div class="transactiondate">
+                    <span th:text="${#strings.substring(transaction.timeStamp, 8, 10)}"/>
+                    <th:block th:switch="${#strings.substring(transaction.timeStamp, 5, 7)}">
+                        <span th:case="'01'">jan.</span>
+                        <span th:case="'02'">feb.</span>
+                        <span th:case="'03'">mrt.</span>
+                        <span th:case="'04'">apr.</span>
+                        <span th:case="'05'">mei</span>
+                        <span th:case="'06'">jun.</span>
+                        <span th:case="'07'">jul.</span>
+                        <span th:case="'08'">aug.</span>
+                        <span th:case="'09'">sep.</span>
+                        <span th:case="'10'">okt.</span>
+                        <span th:case="'11'">nov.</span>
+                        <span th:case="'12'">dec.</span>
+                    </th:block>
+                    <span th:text="${#strings.substring(transaction.timeStamp, 0, 4)}"/>
+                </div>
+                <div class="transactiondescription">
+                    <!-- Nathan - Geef omschrijving, ingekort -->
+                    <span th:text="${#strings.abbreviate(transaction.description, 42)}"/>
+                </div>
+                <div class="transactionamount">
+                    <!-- Nathan - Zet een plus of min teken voor het bedrag -->
+                    <span th:if="${transaction.creditAccount.iban == bankAccount.iban}">&plus;</span>
+                    <span th:unless="${transaction.creditAccount.iban == bankAccount.iban}">&minus;</span>
+                    <span th:text="${#numbers.formatDecimal(transaction.paymentAmount, 0, 'POINT', 2, 'COMMA')}"/>
+                </div>
+                <div class="transactionextra transactionextrahidden">
+                    <span>Van: </span>
+                    <span th:text="${transaction.debitAccount.owner.firstName}"/>
+                    <span th:text="${transaction.debitAccount.owner.prefix}"/>
+                    <span th:text="${transaction.debitAccount.owner.lastName}"/>
+                    <span>&nbsp;-&nbsp;</span>
+                    <span th:text="${transaction.debitAccount.iban}"/>
+                    <br>
+                    <span>Naar: </span>
+                    <span th:text="${transaction.creditAccount.owner.firstName}"/>
+                    <span th:text="${transaction.creditAccount.owner.prefix}"/>
+                    <span th:text="${transaction.creditAccount.owner.lastName}"/>
+                    <span>&nbsp;-&nbsp;</span>
+                    <span th:text="${transaction.creditAccount.iban}"/>
+                </div>
+            </div>
+        </div> <!-- main prime einde -->
+    </main>
+    <div class="grid-item grid-aside2"></div>
+    <div class="grid-item grid-pusher"></div>
+    <footer class="grid-item grid-footer">
+        <form th:object="${bankAccount}" th:action="@{backtomypiggybank}" method="POST">
+            <input hidden type="text" th:value="*{iban}" th:field="*{iban}">
+            <button type="submit" class="button button-back">Terug naar MyPiggyBank</button>
+        </form>
+
+        <form th:object="${bankAccount}" th:action="@{add_account_holder}" method="POST">
+            <input hidden type="text" th:value="*{iban}" th:field="*{iban}">
+            <button type="submit" class="button button-cta">Rekeninghouder toevoegen</button>
+        </form>
+        <form th:object="${bankAccount}" th:action="@{make_payment}" method="POST">
+            <input hidden type="text" th:value="*{iban}" th:field="*{iban}">
+            <input type="submit" class="button button-cta" th:value="overschrijven"/>
+        </form>
+    </footer>
+</div> <!-- grid einde -->
+<!-- Javascript om bedrag-weergave te fixen -->
+<script type="text/javascript" th:src="@{/js/accountbalance.js}"></script>
+</body>
+</html>

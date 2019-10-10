@@ -1,0 +1,65 @@
+<!--Erica & Inge-->
+<!--Styling by: Nathan-->
+
+
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/completed.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>MissPiggyBank | Aanmelden voltooid</title>
+</head>
+<body>
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">Miss Piggy Bank</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="../index">Home</a></li>
+            <li class="nav-item"><a href="../signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="../login">Inloggen</a></li>
+            <li class="nav-item"><a href="../contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="selfie-piggy">
+        <img class="selfie-piggy" th:src="@{/img/piggyselfie.png}"/>
+    </div>
+    <div class="grid-item grid-thanks-top">
+        <p class="header-white">Oink, Oink, <span th:text="${firstName}"></span>!<br>Welkom bij de club!</p>
+        <p class="header-blue">You make <span class="italictext">moi</span><br>look so good!</p>
+    </div>
+    <div class="grid-item grid-thanks-bottom">
+        <p>De IBAN van je nieuwe rekening is <span th:text="${iban}"></span></p>
+
+        <form method="get" action="../login">
+            <button type="submit" class="button button-cta">Log in</button>
+        </form>
+
+<!--        <p><a href="../login">Log in</a> in uw nieuwe account.</p>-->
+<!--        <p>Keer terug naar de <a href="index">homepage</a>.</p>-->
+    </div>
+</div><!-- GRID -->
+</body>
+</html>
+
+<!-- Nathan - oude body -->
+<!--<body>-->
+<!--    <div th:if="${customer.class.name == 'BusinessCustomer'}">-->
+<!--        <h1>Gefeliciteerd <span th:text="${firstName}"></span>!</h1>-->
+<!--    </div>-->
+<!--    <div th:unless="${customer.class.name == 'BusinessCustomer'}">-->
+<!--        <h1>Gefeliciteerd <span th:text="${firstName}"></span>!</h1>-->
+<!--    </div>-->
+<!--    <p>Bedankt voor het invullen van uw gegevens. Het aanmaken van uw account is gelukt!</p>-->
+<!--    <p>De IBAN van uw nieuwe rekening is: <span th:text="${iban}"></span>.</p>-->
+<!--    <p><a href="../login">Log in</a> in uw nieuwe account.</p>-->
+<!--    <p>Keer terug naar de <a href="/">homepage</a>.</p>-->
+
+<!--</body>-->

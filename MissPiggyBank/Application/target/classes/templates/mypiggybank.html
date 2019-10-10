@@ -1,0 +1,106 @@
+<!--Created by TIM -->
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>MissPiggyBank | MyPiggyBank</title>
+</head>
+<body>
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">Miss Piggy Bank</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="index">Home</a></li>
+            <li class="nav-item"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="grid-item grid-aside1">
+    </div>
+    <main class="grid-item grid-main">
+        <div class="main-prime mypiggybank-prime">
+            <h1>Welkom <span th:text="${fullname}"/>!</h1>
+
+
+            <div class="contactbordertop" th:if="${isBusiness}">
+
+                <h2>Bedrijfsgegevens</h2>
+                <div class="contactbusinessleft">
+                    <p><span th:text="${businessname}"/></p>
+                    <p>KvK Nummer: <span th:text="${kvkNummer}"/></p>
+                    <p>Sector: <span th:text="${sector}"/></p>
+                </div>
+
+
+                <div class="contactbusinessright">
+                              <p> Uw Account manager:</p>
+
+                    <span th:if="${accountMan == 'FOZZIE'}"><img class="muppets" th:src="@{/img/fozzie_bear.jpg}"/></span>
+                    <span th:if="${accountMan == 'CHEF'}"><img class="muppets" th:src="@{/img/the_swedish_chef.jpg}"/></span>
+                    <span th:if="${accountMan == 'BEAKER'}"><img class="muppets" th:src="@{/img/beaker.jpg}"/></span>
+                    <span th:if="${accountMan == 'ANIMAL'}"><img class="muppets" th:src="@{/img/animal.jpg}" /></span>
+                    <span th:if="${accountMan == 'GONZO'}"><img class="muppets" th:src="@{/img/gonzo_the_great.jpg}" /></span>
+                </div>
+
+            </div>
+
+            <div class="contactborder">
+                <h2>Persoonlijke gegevens</h2>
+                <div class="contactleft">
+                    <p><span th:text="${streetName}"/> <span th:text="${number}"/> <span th:text="${numberSuffix}"/></p>
+                    <p><span th:text="${city}"/></p>
+                    <p><span th:text="${postalCode}"/></p>
+                </div>
+                <div class="contactright">
+                    <p><span th:text="${email}"/></p>
+                    <p><span th:text="${phonenumber}"/></p>
+                    <p>BSN: <span th:text="${bsn}"/></p>
+                </div>
+
+            </div>
+
+            </div>
+
+
+            <h2 style="line-height: 20px">Selecteer een rekening:</h2>
+
+            <form name='f' th:action="@{account}" th:object="${selectedAccount}" method='POST'>
+                <!-- Nathan - Fix voor postrequest -->
+                <div class="selectaccount">
+                    <select class="form-control" th:field="*{iban}">
+                        <option th:each="bankAccount : ${bankAccounts}" th:value="${bankAccount.iban}"
+                                th:text="${bankAccount.iban}+' :    '+${#numbers.formatDecimal(bankAccount.balance, 1, 'POINT', 2, 'COMMA')}"></option>
+                    </select>
+                    <button type="submit" class="button button-ok">Oink</button>
+                    <!--                    <input name="submit" type="submit" value="submit"/>-->
+                </div>
+            </form>
+
+    </main>
+    <div class="grid-item grid-aside2"></div>
+    <div class="grid-item grid-pusher"></div>
+    <footer class="grid-item grid-footer">
+        <form method="get" th:action="@{logOut}">
+            <button type="submit" class="button button-back">Log uit</button>
+        </form>
+        <form method="get" action="add_account">
+            <button type="submit" class="button button-cta">Open extra rekening</button>
+        </form>
+        <span th:unless="${pendingAuthorization == false}">
+            <form method="get" action="enter_authorisation_code">
+                <button type="submit" class="button button-cta">Koppel nieuwe rekening</button>
+            </form>
+        </span>
+    </footer>
+</div><!-- GRID EINDE -->
+</body>
+</html>

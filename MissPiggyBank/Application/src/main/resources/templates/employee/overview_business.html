@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+    <!-- NS - LAAD FONT AWESOME ICONEN -->
+    <script src="https://kit.fontawesome.com/2de15d0e4a.js" crossorigin="anonymous"></script>
+    <!-- NS - LAAD SCRIPT VOOR UITVOUWFUNCTIE -->
+        <script defer type="text/javascript" th:src="@{/js/overview_business.js}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid">
+        <header class="grid-item grid-header">
+            <div class="headerlogo"></div>
+            <div class="headertext">MISS PIGGY BANK</div>
+        </header>
+        <nav class="grid-item grid-navigation menu">
+            <ul class="menu-nav">
+                <li class="nav-item"><a href="index">Home</a></li>
+                <li class="nav-item"><a href="signup">Inschrijven</a></li>
+                <li class="nav-item"><a href="login">Inloggen</a></li>
+                <li class="nav-item"><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="grid-item grid-aside1"></div>
+
+        <main class="grid-item grid-main">
+
+            <div class="container_white zakelijk">
+                <h2 class="clickable" id="unfold-highest"><i id="highest-icon" class="fas fa-chevron-right"></i> Zakelijke klanten met het hoogste saldo</h2>
+                <div id="highest-table-left" class="klanttabellinks hidden">
+                    <table class="prime-table">
+                        <!-- <th>Saldo: </th>
+                        <th>Sector: </th> -->
+                        <tr th:each ="topCustomer: ${topCustomers}">
+                            <td><span th:text="${topCustomer.firstName}"> </span> <span th:text="${topCustomer.lastName}"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="highest-table-right" class="klanttabelrechts hidden">
+                    <table class="prime-table">
+                        <tr th:each ="customerBalance: ${customerBalances}">
+<<<<<<< HEAD
+                            <td> &euro; <span th:text="${#numbers.formatDecimal(customerBalance, 0, 'POINT', 2, 'COMMA')}"></span></td>
+=======
+                            <td>&euro; <span th:text="${#numbers.formatDecimal(customerBalance, 0, 'POINT', 2, 'COMMA')}"></span></td>
+>>>>>>> ibanchecktest
+                        </tr>
+                    </table>
+                </div>
+            </div> <!-- container_white -->
+
+            <div class="container_white zakelijk">
+                <h2 class="clickable" id="unfold-most-active"><i id="most-active-icon" class="fas fa-chevron-right"></i> 10 meest actieve klanten</h2>
+                <div id="most-active-table-left" class="klanttabellinks hidden">
+                    <table class="prime-table">
+                        <!-- <th>Naam: </th>
+                <th>Saldo: </th>  -->
+                        <tr th:each ="customer: ${topActives}">
+                            <td><span th:text="${customer.firstName}"></span> <span th:text="${customer.lastName}"></span></td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div id="most-active-table-right" class="klanttabelrechts hidden">
+                    <table class="prime-table">
+                        <tr th:each ="totalBalance: ${totalBalances}">
+                            <td>&euro; <span th:text="${#numbers.formatDecimal(totalBalance, 0, 'POINT', 2, 'COMMA')}"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div> <!-- container_white -->
+
+            <div class="container_white zakelijk">
+                <h2 class="clickable" id="unfold-average"><i id="average-icon" class="fas fa-chevron-right"></i> Gemiddelde saldo per branche</h2>
+                <div id="average-table-left" class="klanttabellinks hidden">
+                    <table class="prime-table">
+                        <tr th:each ="sector: ${sectors}">
+                            <td><span th:text="${sector}"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="average-table-right" class="klanttabelrechts hidden">
+                    <table class="prime-table">
+                        <!-- <th>Saldo: </th>
+                        <th>Sector: </th> -->
+                        <tr th:each ="average: ${averages}">
+                            <td>&euro; <span th:text="${#numbers.formatDecimal(average, 0, 'POINT', 2, 'COMMA')}"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div> <!-- container_white -->
+
+        </main>
+
+        <div class="grid-item grid-aside2"></div>
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.grid-thanks-top {
+    background: #ff9283;
+    grid-column: col / span 12;
+    height: 52vh;
+}
+
+.grid-thanks-bottom {
+    background: #fff;
+    font-size: 26px;
+    grid-column: col / span 12;
+    z-index: 300;
+    padding-bottom: 20px;
+}
+
+.grid-thanks-bottom p {
+    text-align: center;
+}
+
+.header-white, .header-blue {
+    font-size: 36px;
+    text-align: center;
+    transform: translateX(-250px) translateY(40px);
+}
+
+.header-white {
+    color: #fff;
+}
+
+.italictext {
+    font-style: italic;
+}
+
+.header-blue {
+    color: #382f72;
+}
+
+.selfie-piggy {
+    position: absolute;
+    top: 22%;
+    right: 10%;
+    max-width: 500px;
+    height: auto;
+}

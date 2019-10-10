@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<!-- Created by Erica & Inge-->
+
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <title>Sign-up | Zakelijkerekening</title>
+</head>
+<body>
+
+<!-- Page Header and nav start-->
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">MISS PIGGY BANK</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="../index">Home</a></li>
+            <li class="nav-item"><a href="../signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="../login">Inloggen</a></li>
+            <li class="nav-item"><a href="../contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Page Header and nav end-->
+
+    <div class="grid-item grid-aside1"></div>
+
+    <main class="grid-item grid-main">
+
+
+        <h1 class="formhead1">Open een bedrijfsrekening</h1>
+        <!--Achter th:action komt nu ook het pad met een /, dit is de URL-->
+        <form action="#" th:action="@{/business/signup}" th:object="${customer}" method="post">
+
+            <div class="container_white signupform">
+                <table>
+                    <h2 class="formhead2">Bedrijfsgegevens</h2>
+
+                    <label>Bedrijfsnaam:</label>
+                    <input type="text" th:field="*{companyName}">
+
+                    <label>KvK nummer:</label>
+                    <input type="text" th:field="*{kvkNumber}">
+
+                    <label>Sector:</label>
+                    <select class="selectbox" th:field="*{sector}">
+                        <option th:value="'SERVICES'" th:text="Services"></option>
+                        <option th:value="'RETAIL'" th:text="Retail"></option>
+                        <option th:value="'HEALTHCARE'" th:text="Healthcare"></option>
+                        <option th:value="'TECH'" th:text="Tech"></option>
+                        <option th:value="'HOSPITALITY'" th:text="Hospitality"></option>
+                        <option th:value="'AGRICULTURE'" th:text="Agriculture"></option>
+                        Selecteer een Sector
+                    </select>
+
+                </table>
+
+            </div>
+
+            <div class="container_white">
+                <h2 class="formhead2"> Kies een account manager</h2>
+
+                <label class="accountmanager-label" th:field="*{accountMan}">
+                    <input type="radio" name="accountMan" class="radio_item" th:value="'FOZZIE'">
+                    <img class="muppets" th:src="@{/img/fozzie_bear.jpg}" alt="Fozzie Bear"/>
+                </label>
+                <label class="accountmanager-label">
+                    <input type="radio" name="accountMan" class="radio_item" th:value="'GONZO'">
+                    <img class="muppets" th:src="@{/img/gonzo_the_great.jpg}" alt="Gonzo the Great"/>
+                </label>
+                <label class="accountmanager-label">
+                    <input type="radio" name="accountMan" class="radio_item" th:value="'ANIMAL'">
+                    <img class="muppets" th:src="@{/img/animal.jpg}" alt="Animal"/>
+                </label>
+                <label class="accountmanager-label">
+                    <input type="radio" name="accountMan" class="radio_item" th:value="'BEAKER'">
+                    <img class="muppets" th:src="@{/img/beaker.jpg}" alt="Beaker"/>
+                </label>
+
+                <label class="accountmanager-label">
+                    <input type="radio" name="accountMan" class="radio_item" th:value="'CHEF'">
+                    <img class="muppets" th:src="@{/img/the_swedish_chef.jpg}" alt="The Swedish Chef"/>
+                </label>
+            </div>
+
+
+            <div class="container_white signupform">
+                <table>
+
+
+                    <h2 class="formhead2">Inloggegevens</h2>
+
+                    <label>Gebruikersnaam:</label>
+                    <input type="text" th:field="*{username}">
+
+
+                    <label>Wachtwoord:</label>
+                    <input type="password" id="password" th:field="*{password}" onkeyup='checkPassword();'>
+
+                    <label>Herhaal wachtwoord:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" onkeyup='checkPassword();'>
+
+                </table>
+                <p class="errorMrg" th:if="${usernameError}" th:text="${usernameError}"></p>
+                <span id="message" class="errorMrg"></span>
+            </div>
+
+            <div class="container_white signupform">
+                <table>
+
+                    <h2 class="formhead2">Contactpersoon</h2>
+
+                    <label>Voornaam:</label>
+                    <input type="text" th:field="*{firstName}">
+
+                    <label>Tussenvoegsel:</label>
+                    <input type="text" th:field="*{prefix}">
+
+                    <label>Achternaam:</label>
+                    <input type="text" th:field="*{lastName}">
+
+                    <label>BSN nummer:</label>
+                    <input type="text" th:field="*{bsn}">
+
+                </table>
+                <p class="errorMrg" th:if="${bsnError}" th:text="${bsnError}"></p>
+
+
+            </div>
+
+            <div class="container_white signupform">
+                <table>
+                    <h2 class="formhead2">Contactpersoongegevens</h2>
+
+                    <label>E-mailadres:</label>
+                    <input type="email" th:field="*{emailaddress}">
+
+                    <label>Straatnaam:</label>
+                    <input type="text" th:field="*{streetName}">
+
+                    <label>Huisnummer:</label>
+                    <input type="text" th:field="*{number}">
+
+                    <label>Huisnummer toevoeging:</label>
+                    <input type="text" th:field="*{numberSuffix}">
+
+                    <label>Woonplaats:</label>
+                    <input type="text" th:field="*{city}">
+
+                    <label>Postcode:</label>
+                    <input type="text" th:field="*{postalCode}">
+
+                    <label>Telefoonnummer:</label>
+                    <input type="text" th:field="*{phonenumber}">
+
+
+                </table>
+
+            </div>
+            <div>
+                <input type="submit" class="button-bottom button-cta" value="Vraag aan">
+            </div>
+</form>
+
+</main>
+
+<div class="grid-item grid-aside2"></div>
+
+
+</div>
+<script type="text/javascript" th:src="@{/js/passwordValidator.js}"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>Geld overmaken</title>
+</head>
+<body>
+
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">Miss Piggy Bank</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="index">Home</a></li>
+            <li class="nav-item"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="grid-item grid-aside1">
+    </div>
+    <main class="grid-item grid-main">
+        <div class="main-top">
+            <table class="top-table">
+                <tr class="top-overview">
+                    <td>Overschrijven van betaalrekening</td>
+                </tr>
+            </table>
+        </div> <!-- main top einde -->
+        <div class="main-prime bottom-rounded">
+            <table>
+                <tr>
+                    <td class="top-info"><span th:text="${debitname}"/></td>
+                <tr>
+                    <td class="top-info-sub1"><span th:text="${debitiban}"/></td>
+                </tr>
+                <td class="top-info-sub2">Huidig saldo &euro; <span
+                        th:text="${#numbers.formatDecimal(balance, 0, 'POINT', 2, 'COMMA')}"/>
+                </td>
+
+                </tr>
+            </table>
+
+            <form class="signup zetmoneybitch" action="#" th:action="@{paymentHandler}" th:object="${transactionDto}"
+                  method="post">
+                <div class="container_white signupform makepay">
+                    <table>
+                        <label>Bedrag in &euro;</label>
+                        <input type="text" th:field="*{paymentAmount}" placeholder="0,00">
+
+                        <label class="table-description">Naar rekening</label>
+                        <input type="text" th:field="*{creditAccount}">
+
+                        <label class="table-description">Omschrijving</label>
+                        <textarea class="multiplelines" cols="40" rows="5" type="text"
+                                  th:field="*{description}"></textarea>
+                    </table>
+                </div>
+                <div>
+                    <input hidden type="text" th:field="*{debitAccount}">
+                    <input class="button button-cta" type="submit" value="oink">
+                </div>
+            </form>
+        </div>
+        <!-- main prime einde -->
+    </main>
+    <div class="grid-item grid-aside2"></div>
+    <div class="grid-item grid-pusher bottom-space"></div>
+
+</div> <!-- grid einde -->
+</body>
+</html>

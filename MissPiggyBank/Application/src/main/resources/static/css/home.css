@@ -1,0 +1,152 @@
+/* Nathan - CSS Miss Piggy Bank - Home - Version 0.1 */
+
+/* -------------------------------------------------- */
+
+/* STYLES HERO GRID / PIGGY IMAGE / SLOGAN TEXT BEGIN */
+
+.grid-hero {
+    background: url('../img/texture_white.png');
+    height: 65vh;
+    grid-column: col / span 12;
+    overflow: hidden;
+}
+
+.piggy {
+    animation: piggy-intro 0.6s 0s 2, piggy-hero 0.5s 1.2s;
+    animation-timing-function: linear;
+    height: inherit;
+    transform: translateX(20vw);
+    visibility: visible;
+}
+
+@keyframes piggy-intro {
+    0% {
+        visibility: hidden;
+        transform: translateX(-100vw);
+    }
+
+    1% {
+        visibility: visible;
+        transform: translateX(-100w);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes piggy-hero {
+    0% {
+        visibility: visible;
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        visibility: visible;
+        transform: translateX(20vw);
+    }
+}
+
+.hero-slogan {
+    animation: slogan 2s;
+    color: #646464;
+    font-size: 35px;
+    left: 9%;
+    position: absolute;
+    top: 35vh;
+}
+
+@keyframes slogan {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* STYLES HERO GRID / PIGGY IMAGE / SLOGAN TEXT END */
+
+/* -------------------------------------------------- */
+
+/* STYLES BOTTOM GRID / LOGIN / JOIN BLOCKS BEGIN */
+
+.grid-bottom {
+    animation: bottom 3s;
+    transform: translateY(1vw);
+}
+
+@keyframes bottom {
+    0% {
+        transform: translateY(20vw);
+    }
+
+    75% {
+        transform: translateY(20vw);
+    }
+
+    100% {
+        transform: translateY(1vw);
+    }
+}
+
+.grid-login {
+    background: #E8E8E8;
+    bottom: 0;
+    height: 200px;
+    position: fixed;
+    width: 50vw;
+}
+
+.grid-login p {
+    color: #828282;
+    text-align: center;
+}
+
+.grid-join {
+    background: #FF9283;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+    position: fixed;
+    width: 50vw;
+}
+
+.grid-join p {
+    color: #555555;
+    text-align: center;
+}
+
+/* STYLES BOTTOM GRID / LOGIN / JOIN BLOCKS END */
+
+/* -------------------------------------------------- */
+
+/* MEDIA QUERIES FOR DEVICES START */
+
+@media screen and (min-width: 990px) /* DESKTOP */ {
+
+    /* ADD MEDIA QUERIES HERE */
+
+}
+
+@media screen and (max-width: 989px) /* TABLET */ {
+
+    .hero-slogan {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 720px) /* MOBILE */ {
+
+    /* ADD MEDIA QUERIES HERE */
+
+}
+
+/* MEDIA QUERIES FOR DEVICES END */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+
+    <title>Transactie geslaagd</title>
+</head>
+<body th:object="${transactionDto}">
+    <div class="grid">
+        <header class="grid-item grid-header">
+            <div class="headerlogo"></div>
+            <div class="headertext">MISS PIGGY BANK</div>
+        </header>
+        <nav class="grid-item grid-navigation menu">
+            <ul class="menu-nav">
+                <li class="nav-item"><a href="index">Home</a></li>
+                <li class="nav-item"><a href="signup">Inschrijven</a></li>
+                <li class="nav-item"><a href="login">Inloggen</a></li>
+                <li class="nav-item"><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="grid-item grid-aside1"></div>
+        <main class="grid-item grid-main">
+            <div class="main-top">
+                <h1>Transactie geslaagd!</h1>
+            </div>
+            <div class="main-prime bottom-rounded">
+                <table class="prime-table">
+                    <tr>
+                        <td>Bedrag:</td>
+                        <td>&#8364;&nbsp;<span th:text="${#numbers.formatDecimal(transactionDto.paymentAmount, 0, 'POINT', 2, 'COMMA')}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Van rekening:</td>
+                        <td><span th:text="*{debitAccount}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Naar rekening:</td>
+                        <td><span th:text="*{creditAccount}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Op:</td>
+                        <td><span th:text="*{timeStamp}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Onder vermelding van:</td>
+                        <td><span th:text="*{description}"/></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <div class="grid-item grid-aside2"></div>
+        <div class="grid-item grid-pusher"></div>
+        <footer class="grid-item grid-footer">
+            <div>
+                <form th:object="${bankAccount}" th:action="@{backToAccount}" method="post">
+                    <button type="submit" class="button button-back">Terug naar transacties</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

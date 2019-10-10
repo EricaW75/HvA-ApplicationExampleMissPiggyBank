@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+
+    <title>MissPiggyBank | Uw nieuwe rekening is toegevoegd!</title>
+</head>
+<body>
+    <div class="grid">
+        <header class="grid-item grid-header">
+            <div class="headerlogo"></div>
+            <div class="headertext">MISS PIGGY BANK</div>
+        </header>
+        <nav class="grid-item grid-navigation menu">
+            <ul class="menu-nav">
+                <li class="nav-item"><a href="index">Home</a></li>
+                <li class="nav-item"><a href="signup">Inschrijven</a></li>
+                <li class="nav-item"><a href="login">Inloggen</a></li>
+                <li class="nav-item"><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="grid-item grid-aside1"></div>
+        <main class="grid-item grid-main">
+            <h1 class="loginheader">Nieuwe rekening toegevoegd!</h1>
+            <span>
+                <div class="container_white signupform">
+                    <table>
+                        <h2 class="formhead2">Gefeliciteerd met uw nieuwe rekening!</h2>
+                        <tr>
+                            <td>Wij checken nu uw gegevens.<br>Als alles goed is gegaan ziet u
+        de nieuwe rekening in uw overzicht.</td>
+                        </tr>
+                    </table>
+                    <img class="statler_waldorf" th:src="@{/img/animal-happy.gif}"/>
+                </div>
+            </span>
+        </main>
+        <div class="grid-item grid-aside2"></div>
+        <div class="grid-item grid-pusher"></div>
+        <footer class="grid-item grid-footer">
+            <span>
+                <form th:object="${bankAccount}" th:action="@{backtomypiggybank}" method="POST">
+                    <button type="submit" class="button button-back">Terug naar MyPiggyBank</button>
+                </form>
+            </span>
+        </footer>
+    </div>
+</body>
+</html>

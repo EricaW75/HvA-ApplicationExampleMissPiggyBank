@@ -1,0 +1,63 @@
+<!-- Created by Gabor -->
+
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <span th:replace="fragments/favicon :: faviconsettings"/>
+    <title>MissPiggyBank | Extra rekening openen</title>
+</head>
+
+
+<body>
+<div class="grid">
+    <header class="grid-item grid-header">
+        <div class="headerlogo"></div>
+        <div class="headertext">Miss Piggy Bank</div>
+    </header>
+    <nav class="grid-item grid-navigation menu">
+        <ul class="menu-nav">
+            <li class="nav-item"><a href="index">Home</a></li>
+            <li class="nav-item"><a href="signup">Inschrijven</a></li>
+            <li class="nav-item"><a href="login">Inloggen</a></li>
+            <li class="nav-item"><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid-item grid-aside1">
+    </div>
+
+    <main class="grid-item grid-main">
+        <div class="main-top">
+        </div> <!-- main top einde -->
+        <div class="main-prime bottom-rounded">
+
+            <form action="#" th:action="@{make_account}" method="get">
+            <div class="container_white">
+
+                <h1>Oké <span th:text="${session.firstName}"/>,<br>voeg maar toe die extra rekening.</h1>
+
+
+                <div class="button-position">
+                    <input class="button button-cta" type="submit" value="extra rekening">
+                </div>
+
+            </div>
+            </form>
+        </div>
+    </main>
+    <div class="grid-item grid-aside2"></div>
+        <div class="grid-item grid-pusher bottom-space"></div>
+</div><!-- grid einde -->
+</body>
+
+</html>
+
+
+</body>
+</html>

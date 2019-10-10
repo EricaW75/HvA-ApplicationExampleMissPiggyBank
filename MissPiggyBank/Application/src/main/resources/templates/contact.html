@@ -1,0 +1,63 @@
+<!--Inge-->
+<!DOCTYPE html>
+<html lang="nl-NL" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,400i,500,500i&display=swap" rel="stylesheet">
+    <title>MissPiggyBank | Contact</title>
+</head>
+<body>
+    <div class="grid">
+        <header class="grid-item grid-header">
+            <div class="headerlogo"></div>
+            <div class="headertext">Miss Piggy Bank</div>
+        </header>
+        <nav class="grid-item grid-navigation menu">
+            <ul class="menu-nav">
+                <li class="nav-item"><a href="index">Home</a></li>
+                <li class="nav-item"><a href="signup">Inschrijven</a></li>
+                <li class="nav-item"><a href="login">Inloggen</a></li>
+                <li class="nav-item current"><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="grid-item grid-aside1">
+        </div>
+        <main class="grid-item grid-main">
+            <div class="main-top">
+                <h1 class="contactheader">Miss Piggy Team To The Rescue!</h1>
+                <img class="kermit" th:src="@{/img/kermit_phone.gif}"/>
+                <h2 class="contactheader">Waarmee kunnen we u helpen?</h2>
+            </div>
+            <div class="main-prime main-contact">
+                <h2>Whatsapp:</h2>
+                <p>06-MissPiggy</p>
+                <p>7 dagen per week van 08:00 tot 22:00 uur.</p>
+            </div>
+            <div class="main-prime main-contact">
+                <h2>Bel:</h2>
+                <p>0800-MPB</p>
+                <p>Elke werkdag van 08:00 tot 18:00 uur</p>
+            </div>
+            <div class="main-prime main-contact">
+                <h2>E-mail:</h2>
+                <p>info@misspiggybank.nl</p>
+                <p>Antwoord binnen 2 werkdagen</p>
+            </div>
+        </main>
+        <div class="grid-item grid-aside2"></div>
+
+        <div class="grid-item grid-pusher"></div>
+        <footer class="grid-item grid-footer">
+            <div>
+                <form method="get" action="index">
+                    <button type="submit" class="button button-cta">Home</button>
+                </form>
+            </div>
+        </footer>
+
+
+
+    </div>
+</body>
+</html>
